@@ -10,9 +10,8 @@ public class DrawingSurface extends PApplet {
 	// FIELDS
 	public static final int screenWidth = 1000;
 	public static final int screenHeight = 1000;
-	private Rectangle screen;
+	private Student player;
 	private ArrayList<Shape> obstacles;
-	//private Student player;
 
 	// CONSTRUCTOR - Initialize any added fields here.
 	/**
@@ -20,8 +19,8 @@ public class DrawingSurface extends PApplet {
 	 * Size 1000 x 1000 for height and width
 	 */
 	public DrawingSurface() {
-		super();
-		screen = new Rectangle(0,0,screenWidth,screenHeight);
+//		super();
+		spawnStudent();
 	}
 
 
@@ -40,6 +39,10 @@ public class DrawingSurface extends PApplet {
 		fill(0);
 		textSize(10);
 		popStyle();
+	}
+	public void spawnStudent() {
+		player = new Student(600,600);
+		player.draw(this);
 	}
 	
 	/**
