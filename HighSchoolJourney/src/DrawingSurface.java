@@ -5,6 +5,11 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import processing.core.PApplet;
 
+/**
+ * drawingSurface of game
+ * @author Pman, Sachin, Kevin
+ *
+ */
 public class DrawingSurface extends PApplet {
 
 	// FIELDS
