@@ -24,7 +24,7 @@ public class DrawingSurface extends PApplet {
 	 * Size 1000 x 1000 for height and width
 	 */
 	public DrawingSurface() {
-//		super();
+		super();
 		spawnStudent();
 	}
 
