@@ -14,11 +14,15 @@ import processing.core.PApplet;
 public class DrawingSurface extends PApplet {
 
 	// FIELDS
-	public static final int screenWidth = 1000;
-	public static final int screenHeight = 1000;
+	public static final int screenWidth = 1920;
+	public static final int screenHeight = 1080;
 	private Student player;
 	private ArrayList<Shape> obstacles;
 	private ArrayList<Integer> keys;
+	private ArrayList<Shape> freshmanLevel;
+	private ArrayList<Shape> sophomoreLevel;
+	private ArrayList<Shape> juniorLevel;
+	private ArrayList<Shape> seniorLevel;
 
 	// CONSTRUCTOR - Initialize any added fields here.
 	/**
