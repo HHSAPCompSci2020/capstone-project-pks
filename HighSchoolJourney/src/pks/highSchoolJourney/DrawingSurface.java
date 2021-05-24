@@ -52,12 +52,13 @@ public class DrawingSurface extends PApplet {
 		textSize(10);
 		popStyle();
 		player.draw(this);
-		if (isPressed(KeyEvent.VK_A))
+	/*	if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
 		if (isPressed(KeyEvent.VK_D))
 			player.walk(1);
-	//	if (isPressed(KeyEvent.VK_W))
-	//		player.jump();
+		if (isPressed(KeyEvent.VK_W))
+			player.jump();
+			*/	
 	}
 	public void spawnStudent() {
 		player = new Student(600,200);
