@@ -8,7 +8,7 @@ import processing.core.PApplet;
 
 /**
  * drawingSurface of game
- * @author Pranav, Sachin, Kevin
+ * @author Pranav, Sachin, Kevin 
  *
  */
 public class DrawingSurface extends PApplet {
