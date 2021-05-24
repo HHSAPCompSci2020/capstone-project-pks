@@ -1,3 +1,4 @@
+package pks.highSchoolJourney;
 
 import java.awt.Rectangle;
 import java.awt.Shape;
