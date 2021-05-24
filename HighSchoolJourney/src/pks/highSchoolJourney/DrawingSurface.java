@@ -18,6 +18,7 @@ public class DrawingSurface extends PApplet {
 	public static final int screenHeight = 1000;
 	private Student player;
 	private ArrayList<Shape> obstacles;
+	private ArrayList<Integer> keys;
 
 	// CONSTRUCTOR - Initialize any added fields here.
 	/**
@@ -41,14 +42,21 @@ public class DrawingSurface extends PApplet {
 	 */
 	public void draw() {
 		background(255);
+		pushMatrix();
 		pushStyle();
 		fill(0);
 		textSize(10);
 		popStyle();
+		player.draw(this);
+		if (isPressed(KeyEvent.VK_A))
+			player.walk(-1);
+		if (isPressed(KeyEvent.VK_D))
+			player.walk(1);
+	//	if (isPressed(KeyEvent.VK_W))
+	//		player.jump();
 	}
 	public void spawnStudent() {
-		player = new Student(600,600);
-		player.draw(this);
+		player = new Student(600,200);
 	}
 	
 	/**
@@ -61,25 +69,20 @@ public class DrawingSurface extends PApplet {
 	/**
 	 * Moves student as keys are pressed 
 	 */
-	public void keyPressed()
-	{
-/*		if (keyCode == KeyEvent.VK_UP)
-		{
-			h.changeScale(2f);
-		}
-		if (keyCode == KeyEvent.VK_DOWN)
-		{
-			h.changeScale(0.5f);
-		}
-		if (keyCode == KeyEvent.VK_LEFT)
-		{
-			p.changeSide(-25f);
-		}
-		if (keyCode == KeyEvent.VK_RIGHT)
-		{
-			p.changeSide(25f);
-		}*/
+
+	public void keyPressed() {
+		keys.add(keyCode);
 	}
+
+	public void keyReleased() {
+		while(keys.contains(keyCode))
+			keys.remove(new Integer(keyCode));
+	}
+
+	public boolean isPressed(Integer code) {
+		return keys.contains(code);
+	}
+
 
 	// Add methods for user interaction. Check the processing reference for info on this (http://processing.org).
 	// We'll also review how to get mouse/keys working in class.

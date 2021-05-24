@@ -21,6 +21,7 @@ public class Student {
 	
 	public void draw(PApplet marker)
 	{
-		marker.rect(600,600,700,700);
+		marker.rect(20,20,20,20);
 	}
+	
 }
