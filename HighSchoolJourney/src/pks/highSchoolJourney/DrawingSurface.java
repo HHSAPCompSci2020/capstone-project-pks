@@ -77,7 +77,7 @@ public class DrawingSurface extends PApplet {
 			player.jump(1);
 	}
 	public void spawnStudent() {
-		player = new Student(10, 540);
+		player = new Student(10, 515);
 	}
 	
 	/**
