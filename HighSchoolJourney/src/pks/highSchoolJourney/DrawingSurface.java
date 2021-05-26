@@ -167,7 +167,7 @@ public class DrawingSurface extends PApplet {
 		{
 			pushStyle();
 			textSize(40);
-			text("Congratulations! You graduated!", 50, 50);
+			text("Congratulations! You graduated!", 600, 500);
 			popStyle();
 		}
 	}
