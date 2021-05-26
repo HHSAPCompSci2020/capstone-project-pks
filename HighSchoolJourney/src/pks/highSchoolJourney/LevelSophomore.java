@@ -12,7 +12,7 @@ import processing.core.PApplet;
  * @author Sachin
  *
  */
-public class LevelSophmore extends PApplet {
+public class LevelSophomore extends PApplet {
 
 	private ArrayList<Shape> sophmoreLevel;
 	
@@ -20,7 +20,7 @@ public class LevelSophmore extends PApplet {
 	 * Constructs the level by giving life to the array list of shapes and adding 
 	 * shapes to the list.
 	 */
-	public LevelSophmore() {
+	public LevelSophomore() {
 		
 		sophmoreLevel = new ArrayList<Shape>();
 		
