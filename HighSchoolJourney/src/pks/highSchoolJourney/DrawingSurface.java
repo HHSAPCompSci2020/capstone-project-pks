@@ -58,7 +58,6 @@ public class DrawingSurface extends PApplet {
 			player.jump(-1);
 		if (isPressed(KeyEvent.VK_S))
 			player.jump(1);
-		player.act(tempArray);
 	}
 	public void spawnStudent() {
 		player = new Student(10, 540);
