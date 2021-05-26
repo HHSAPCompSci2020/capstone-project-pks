@@ -56,6 +56,15 @@ public class Student extends MovingImage {
 			xVelocity += change;
 	}
 	
+	public boolean checkWin() {
+		double x1 = getX();
+		double y1= getY();
+		double x2 = x1 + xVelocity;
+		double y2 = y1 + yVelocity;
+		Rectangle2D.Double checkY = new Rectangle2D.Double(x1,Math.min(y1,y2),50,50+Math.abs(yVelocity));
+		Rectangle2D.Double checkX = new Rectangle2D.Double(Math.min(x1,x2),y2,width+Math.abs(xVelocity),50);
+		return (winRect.intersects(checkX) || winRect.intersects(checkY));
+	}
 	
 	public void jump(int change) {
 		if (yVelocity <= 10 && xVelocity >= -10)
@@ -68,8 +77,6 @@ public class Student extends MovingImage {
 	public void act(ArrayList<Shape> obstacles) {
 		double x1 = getX();
 		double y1= getY();
-		double width = getWidth();
-		double height = getHeight();
 		double x2 = x1 + xVelocity;
 		double y2 = y1 + yVelocity;
 		Rectangle2D.Double checkY = new Rectangle2D.Double(x1,Math.min(y1,y2),50,50+Math.abs(yVelocity));
@@ -86,14 +93,9 @@ public class Student extends MovingImage {
 			for (Shape ob : obstacles) {
 				if (ob.intersects(checkY)) {
 					intersect = intersect + 1;
-					System.out.println("lives");
 					lives = lives + 1;	
 				}
 			}
-		}
-		if (winRect.intersects(checkX) || winRect.intersects(checkY)){
-			System.out.println("win");
-			year++;
 		}
 		if (Math.abs(xVelocity) < .1)
 			xVelocity = 0;

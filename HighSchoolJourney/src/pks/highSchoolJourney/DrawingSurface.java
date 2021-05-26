@@ -22,6 +22,8 @@ public class DrawingSurface extends PApplet {
 	private LevelSophomore sophomoreLevel = new LevelSophomore();
 	private LevelJunior juniorLevel = new LevelJunior();
 	private LevelSenior seniorLevel = new LevelSenior();
+	private int year = 1;
+	private boolean isSpawned = false;
 	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
@@ -52,15 +54,43 @@ public class DrawingSurface extends PApplet {
 	 * draws the game screen and keeps updating the screen as needed
 	 */
 	public void draw() {
-		background(255);
+		background(51,153,255);
+		player.draw(this);
 		pushStyle();
 		fill(0);
-		textSize(10);
 		popStyle();
-		player.draw(this);
-		
-		if (player.getYear() == 1)
+		if (year == 1)
 		{
+			textSize(40);
+			pushStyle();
+			text("WASD to move, make it to the smaller square\nwithout hitting any obstacles!", 50, 50);
+			popStyle();
+			player.act(freshmanLevel.getLevel());
+			if (player.checkWin()) {
+				year++;
+			}
+			for(Shape s : freshmanLevel.getLevel())
+			{
+				if(s instanceof Line2D)
+				{
+					Line2D l = (Line2D)s;
+					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+				}
+				if (player.getIntersect() >= 1) {
+					spawnStudent();
+					player.setIntersect(0);
+				}
+			}
+		} else if (year == 2)
+		{
+			if (isSpawned == false) {
+				spawnStudent();
+				isSpawned = true;
+			}
+			if (player.checkWin()) {
+				year++;
+				isSpawned = false;
+			}
 			player.act(sophomoreLevel.getLevel());
 			for(Shape s : sophomoreLevel.getLevel())
 			{
@@ -74,28 +104,18 @@ public class DrawingSurface extends PApplet {
 					player.setIntersect(0);
 				}
 			}
-		}
-		
-		if (player.getYear() == 2)
+		} else if (year == 3)
 		{
-			player.act(sophomoreLevel.getLevel());
-			for(Shape s : sophomoreLevel.getLevel())
-			{
-				if(s instanceof Line2D)
-				{
-					Line2D l = (Line2D)s;
-					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
-				}
-				if (player.getIntersect() >= 1) {
-					spawnStudent();
-					player.setIntersect(0);
-				}
+			if (isSpawned == false) {
+				spawnStudent();
+				isSpawned = true;
 			}
-		}
-		
-		if (player.getYear() == 3)
-		{
+			if (player.checkWin()) {
+				year++;
+				isSpawned = false;
+			}
 			player.act(juniorLevel.getLevel());
+			
 			for(Shape s : juniorLevel.getLevel())
 			{
 				if(s instanceof Line2D)
@@ -112,6 +132,17 @@ public class DrawingSurface extends PApplet {
 		
 //		if (player.getYear() == 4)
 //		{
+//			if (isSpawned == false) {
+//				spawnStudent();
+//				isSpawned = true;
+//			}
+//			if (player.checkWin()) {
+//				year++;
+//				pushStyle();
+//				textSize(40);
+//				text("Congratulations! You graduated!", 50, 50);
+//				popStyle();
+//			}
 //			player.act(seniorLevel.getLevel());
 //			for(Shape s : seniorLevel.getLevel())
 //			{
