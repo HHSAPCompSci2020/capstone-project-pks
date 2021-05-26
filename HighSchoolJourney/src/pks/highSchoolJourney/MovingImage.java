@@ -25,6 +25,7 @@ public class MovingImage extends Rectangle2D.Double {
 	public void draw(PApplet marker)
 	{
 		marker.rect((float)x,(float)y, 50, 50);
+		marker.rect(1800,500,30,30);
 	}
 	
 }

@@ -31,7 +31,7 @@ public class Student extends MovingImage {
 		xVelocity = 0;
 		yVelocity = 0;
 		friction = 0.85;
-		winRect = new Rectangle(0, 0, 30, 30);
+		winRect = new Rectangle(1800, 500, 30, 30);
 	}
 	
 	public int getYear() {
