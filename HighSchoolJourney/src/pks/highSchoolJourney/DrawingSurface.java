@@ -56,8 +56,9 @@ public class DrawingSurface extends PApplet {
 		textSize(10);
 		popStyle();
 		player.draw(this);
-		if (player.getYear() == 1)
+		if (player.getYear() == 2)
 		{
+			player.act(sophomoreLevel.getLevel());
 			for(Shape s : sophomoreLevel.getLevel())
 			{
 				if(s instanceof Line2D)
@@ -65,9 +66,12 @@ public class DrawingSurface extends PApplet {
 					Line2D l = (Line2D)s;
 					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
 				}
+				if (player.getIntersect() >= 1) {
+					spawnStudent();
+					player.setIntersect(0);
+				}
 			}
 		}
-		player.act(tempArray);
 		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
 		if (isPressed(KeyEvent.VK_D))

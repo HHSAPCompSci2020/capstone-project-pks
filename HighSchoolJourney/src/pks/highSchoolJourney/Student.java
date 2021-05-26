@@ -17,6 +17,7 @@ public class Student extends MovingImage {
 	private double xVelocity, yVelocity;
 	private double friction;
 	private int lives = 1;
+	private int intersect = 0;
 	private int year = 1;
 	private Rectangle winRect;
 	
@@ -34,12 +35,15 @@ public class Student extends MovingImage {
 		winRect = new Rectangle(1800, 500, 30, 30);
 	}
 	
+	public void setIntersect(int x) {
+		intersect = x;
+	}
 	public int getYear() {
 		return year;
 	}
 	
-	public void addYear() {
-		year++;
+	public int getIntersect() {
+		return intersect;
 	}
 	
 	/**
@@ -73,15 +77,14 @@ public class Student extends MovingImage {
 		if (xVelocity > 0) {
 			for (Shape ob : obstacles) {
 				if (ob.intersects(checkX)) {
-					lives = lives + 1;
-					System.out.println("lives");
+					intersect = intersect + 1;
 				}
 			}
 		}
 		if (yVelocity > 0) {
 			for (Shape ob : obstacles) {
 				if (ob.intersects(checkY)) {
-					lives = lives + 1;
+					intersect = intersect + 1;
 					System.out.println("lives");
 				}
 			}
