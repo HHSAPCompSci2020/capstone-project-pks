@@ -130,33 +130,29 @@ public class DrawingSurface extends PApplet {
 			}
 		}
 		
-//		if (player.getYear() == 4)
-//		{
-//			if (isSpawned == false) {
-//				spawnStudent();
-//				isSpawned = true;
-//			}
-//			if (player.checkWin()) {
-//				year++;
-//				pushStyle();
-//				textSize(40);
-//				text("Congratulations! You graduated!", 50, 50);
-//				popStyle();
-//			}
-//			player.act(seniorLevel.getLevel());
-//			for(Shape s : seniorLevel.getLevel())
-//			{
-//				if(s instanceof Line2D)
-//				{
-//					Line2D l = (Line2D)s;
-//					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
-//				}
-//				if (player.getIntersect() >= 1) {
-//					spawnStudent();
-//					player.setIntersect(0);
-//				}
-//			}
-//		}
+		if (year == 4)
+		{
+			if (isSpawned == false) {
+				spawnStudent();
+				isSpawned = true;
+			}
+			if (player.checkWin()) {
+				year++;
+			}
+			player.act(seniorLevel.getLevel());
+			for(Shape s : seniorLevel.getLevel())
+			{
+				if(s instanceof Line2D)
+				{
+					Line2D l = (Line2D)s;
+					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+				}
+				if (player.getIntersect() >= 1) {
+					spawnStudent();
+					player.setIntersect(0);
+				}
+			}
+		}
 		
 		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
@@ -166,7 +162,16 @@ public class DrawingSurface extends PApplet {
 			player.jump(-1);
 		if (isPressed(KeyEvent.VK_S))
 			player.jump(1);
+
+		if (year == 5)
+		{
+			pushStyle();
+			textSize(40);
+			text("Congratulations! You graduated!", 50, 50);
+			popStyle();
+		}
 	}
+		
 	public void spawnStudent() {
 		player = new Student(10, 515);
 	}
