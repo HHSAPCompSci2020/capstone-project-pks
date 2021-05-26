@@ -16,6 +16,7 @@ public class Student extends MovingImage {
 
 	private double xVelocity, yVelocity;
 	private double friction;
+	private int lives = 1;
 	
 	/**
 	 * Constructs a student by assigning values to fields and 
@@ -49,13 +50,31 @@ public class Student extends MovingImage {
 	/**
 	 * Student constantly has x and y velocity tinkered
 	 */
-	public void act() {
+	public void act(ArrayList<Shape> obstacles) {
 		double x1 = getX();
 		double y1= getY();
 		double width = getWidth();
 		double height = getHeight();
 		double x2 = x1 + xVelocity;
 		double y2 = y1 + yVelocity;
+		Rectangle2D.Double checkY = new Rectangle2D.Double(x1,Math.min(y1,y2),50,50+Math.abs(yVelocity));
+		Rectangle2D.Double checkX = new Rectangle2D.Double(Math.min(x1,x2),y2,width+Math.abs(xVelocity),50);
+		if (xVelocity > 0) {
+			for (Shape ob : obstacles) {
+				if (ob.intersects(checkX)) {
+					lives = lives + 1;
+					System.out.println("lives");
+				}
+			}
+		}
+		if (yVelocity > 0) {
+			for (Shape ob : obstacles) {
+				if (ob.intersects(checkY)) {
+					lives = lives + 1;
+					System.out.println("lives");
+				}
+			}
+		}
 		if (Math.abs(xVelocity) < .1)
 			xVelocity = 0;
 		xVelocity *= friction;

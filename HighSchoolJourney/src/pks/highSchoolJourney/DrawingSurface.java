@@ -20,6 +20,7 @@ public class DrawingSurface extends PApplet {
 	
 	private Student player;
 	private ArrayList<Integer> keys;
+	private ArrayList<Shape> tempArray;
 
 
 	// CONSTRUCTOR - Initialize any added fields here.
@@ -30,7 +31,7 @@ public class DrawingSurface extends PApplet {
 	public DrawingSurface() {
 		super();
 		keys = new ArrayList<Integer>();
-		
+		tempArray = new ArrayList<Shape>();
 		spawnStudent();
 	}
 
@@ -45,6 +46,7 @@ public class DrawingSurface extends PApplet {
 	 * draws the game screen and keeps updating the screen as needed
 	 */
 	public void draw() {
+		tempArray.add(new Rectangle(200,400,400,50));
 		background(255);
 		pushStyle();
 		fill(0);
@@ -59,7 +61,7 @@ public class DrawingSurface extends PApplet {
 			player.jump(-1);
 		if (isPressed(KeyEvent.VK_S))
 			player.jump(1);
-		player.act();
+		player.act(tempArray);
 	}
 	public void spawnStudent() {
 		player = new Student(100,800);

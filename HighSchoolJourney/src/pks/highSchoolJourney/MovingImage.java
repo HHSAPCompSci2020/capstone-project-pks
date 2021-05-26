@@ -23,7 +23,7 @@ public class MovingImage extends Rectangle2D.Double {
 	
 	public void draw(PApplet marker)
 	{
-		marker.rect((float)x,(float)y, 20, 20);
+		marker.rect((float)x,(float)y, 50, 50);
 	}
 	
 }
