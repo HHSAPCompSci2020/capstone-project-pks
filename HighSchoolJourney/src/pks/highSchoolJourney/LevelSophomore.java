@@ -2,6 +2,8 @@ package pks.highSchoolJourney;
 
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.awt.geom.Line2D;
+import java.awt.geom.Line2D.Double;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import processing.core.PApplet;
@@ -24,7 +26,13 @@ public class LevelSophomore extends PApplet {
 		
 		sophmoreLevel = new ArrayList<Shape>();
 		
-		
+		sophmoreLevel.add(new Line2D.Double(0, 490, 1920, 490));
+		sophmoreLevel.add(new Line2D.Double(0, 590, 1920, 590));
+		sophmoreLevel.add(new Line2D.Double(420, 590, 450, 550));
+		sophmoreLevel.add(new Line2D.Double(450, 550, 480, 590));
+		sophmoreLevel.add(new Line2D.Double(1120, 490, 1150, 530));
+		sophmoreLevel.add(new Line2D.Double(1150, 530, 1180, 490));
+
 	}
 	
 	/**

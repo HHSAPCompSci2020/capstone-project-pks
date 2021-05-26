@@ -19,6 +19,7 @@ public class DrawingSurface extends PApplet {
 	public static final int screenWidth = 1920;
 	public static final int screenHeight = 1080;
 	private LevelFreshman freshmanLevel = new LevelFreshman();
+	private LevelSophomore sophomoreLevel = new LevelSophomore();
 	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
@@ -57,7 +58,7 @@ public class DrawingSurface extends PApplet {
 		player.draw(this);
 		if (player.getYear() == 1)
 		{
-			for(Shape s : freshmanLevel.getLevel())
+			for(Shape s : sophomoreLevel.getLevel())
 			{
 				if(s instanceof Line2D)
 				{
