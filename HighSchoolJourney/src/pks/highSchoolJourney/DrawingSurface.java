@@ -62,7 +62,7 @@ public class DrawingSurface extends PApplet {
 		player.act();
 	}
 	public void spawnStudent() {
-		player = new Student(100,800);
+		player = new Student(10, 540);
 	}
 	
 	/**
