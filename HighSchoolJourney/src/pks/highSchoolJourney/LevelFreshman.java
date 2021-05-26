@@ -23,7 +23,7 @@ public class LevelFreshman extends PApplet {
 	public LevelFreshman() {
 		freshmanLevel = new ArrayList<Shape>(); 
 		
-		freshmanLevel.add(new Rectangle(0,0,0,0));
+//		freshmanLevel.add(new Line(0,0, 3, 3));
 	}
 	
 	/**
