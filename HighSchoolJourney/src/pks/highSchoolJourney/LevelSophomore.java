@@ -16,7 +16,7 @@ import processing.core.PApplet;
  */
 public class LevelSophomore extends PApplet {
 
-	private ArrayList<Shape> sophmoreLevel;
+	private ArrayList<Shape> sophomoreLevel;
 	
 	/**
 	 * Constructs the level by giving life to the array list of shapes and adding 
@@ -24,14 +24,25 @@ public class LevelSophomore extends PApplet {
 	 */
 	public LevelSophomore() {
 		
-		sophmoreLevel = new ArrayList<Shape>();
+		sophomoreLevel = new ArrayList<Shape>();
 		
-		sophmoreLevel.add(new Line2D.Double(0, 490, 1920, 490));
-		sophmoreLevel.add(new Line2D.Double(0, 590, 1920, 590));
-		sophmoreLevel.add(new Line2D.Double(420, 590, 450, 550));
-		sophmoreLevel.add(new Line2D.Double(450, 550, 480, 590));
-		sophmoreLevel.add(new Line2D.Double(1120, 490, 1150, 530));
-		sophmoreLevel.add(new Line2D.Double(1150, 530, 1180, 490));
+		sophomoreLevel.add(new Line2D.Double(0, 490, 420, 490));
+		sophomoreLevel.add(new Line2D.Double(0, 590, 520, 590));
+		sophomoreLevel.add(new Line2D.Double(420, 490, 420, 290));
+		sophomoreLevel.add(new Line2D.Double(520, 590, 520, 390));
+		sophomoreLevel.add(new Line2D.Double(420, 290, 720, 290));
+		sophomoreLevel.add(new Line2D.Double(520, 390, 620, 390));
+		sophomoreLevel.add(new Line2D.Double(720, 290, 720, 650));
+		sophomoreLevel.add(new Line2D.Double(620, 390, 620, 750));
+		sophomoreLevel.add(new Line2D.Double(720, 650, 920, 650));
+		sophomoreLevel.add(new Line2D.Double(620, 750, 1020, 750));
+		sophomoreLevel.add(new Line2D.Double(920, 650, 920, 490));
+		sophomoreLevel.add(new Line2D.Double(1020, 750, 1020, 590));
+		sophomoreLevel.add(new Line2D.Double(920, 490, 1920, 490));
+		sophomoreLevel.add(new Line2D.Double(1020, 590, 1920, 590));
+	
+		
+		
 
 	}
 	
@@ -40,7 +51,7 @@ public class LevelSophomore extends PApplet {
 	 * @return an arraylist of shapes containing the obstacles of the level
 	 */
 	public ArrayList<Shape> getLevel() {
-		return sophmoreLevel;
+		return sophomoreLevel;
 	}
 	
 }

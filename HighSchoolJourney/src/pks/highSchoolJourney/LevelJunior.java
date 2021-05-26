@@ -26,6 +26,14 @@ public class LevelJunior extends PApplet{
 		
 		juniorLevel = new ArrayList<Shape>();
 		
+		juniorLevel.add(new Line2D.Double(0, 490, 1920, 490));
+		juniorLevel.add(new Line2D.Double(0, 590, 1920, 590));
+		juniorLevel.add(new Line2D.Double(420, 590, 450, 560));
+		juniorLevel.add(new Line2D.Double(450, 560, 480, 590));
+		juniorLevel.add(new Line2D.Double(1120, 490, 1150, 520));
+		juniorLevel.add(new Line2D.Double(1150, 520, 1180, 490));
+		juniorLevel.add(new Line2D.Double(600, 580, 680, 580));
+		
 	}
 	
 	/**
