@@ -17,6 +17,7 @@ public class Student extends MovingImage {
 	private double xVelocity, yVelocity;
 	private double friction;
 	private int lives = 1;
+	private int year = 1;
 	
 	/**
 	 * Constructs a student by assigning values to fields and 
@@ -29,6 +30,10 @@ public class Student extends MovingImage {
 		xVelocity = 0;
 		yVelocity = 0;
 		friction = 0.85;
+	}
+	
+	public int returnYear() {
+		return year;
 	}
 	
 	/**

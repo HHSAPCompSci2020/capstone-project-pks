@@ -3,6 +3,7 @@ package pks.highSchoolJourney;
 import java.awt.Rectangle;
 import java.awt.Shape;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Line2D;
 import java.util.ArrayList;
 import processing.core.PApplet;
 
@@ -17,7 +18,8 @@ public class DrawingSurface extends PApplet {
 	// FIELDS
 	public static final int screenWidth = 1920;
 	public static final int screenHeight = 1080;
-	
+	private LevelFreshman fresh;
+	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
 
@@ -30,6 +32,9 @@ public class DrawingSurface extends PApplet {
 	public DrawingSurface() {
 		super();
 		keys = new ArrayList<Integer>();
+		tempArray = new ArrayList<Shape>();
+		tempArray.add(new Line2D.Double(0, 515, 1920, 515));
+		tempArray.add(new Line2D.Double(0, 565, 1920, 565));
 		spawnStudent();
 	}
 
@@ -50,6 +55,7 @@ public class DrawingSurface extends PApplet {
 		textSize(10);
 		popStyle();
 		player.draw(this);
+		player.act(tempArray);
 		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
 		if (isPressed(KeyEvent.VK_D))
