@@ -2,6 +2,8 @@ package pks.highSchoolJourney;
 
 import java.awt.Rectangle;
 import java.awt.Shape;
+import java.awt.geom.Line2D;
+import java.awt.geom.Line2D.Double;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import processing.core.PApplet;
@@ -20,10 +22,12 @@ public class LevelFreshman extends PApplet {
 	 * Constructs the level by giving life to the array list of shapes and adding 
 	 * shapes to the list.
 	 */
-	public LevelFreshman() {
+	public LevelFreshman(PApplet surface) {
 		freshmanLevel = new ArrayList<Shape>(); 
 		
-//		freshmanLevel.add(new Line(0,0, 3, 3));
+		freshmanLevel.add(new Line2D.Double(0, 515, 1920, 515));
+		freshmanLevel.add(new Line2D.Double(0, 565, 1920, 565));
+		
 	}
 	
 	/**
