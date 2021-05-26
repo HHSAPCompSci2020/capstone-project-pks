@@ -32,8 +32,8 @@ public class DrawingSurface extends PApplet {
 		super();
 		keys = new ArrayList<Integer>();
 		tempArray = new ArrayList<Shape>();
-		tempArray.add(new Line2D.Double(0, 440, 1920, 440));
-		tempArray.add(new Line2D.Double(0, 640, 1920, 640));
+		tempArray.add(new Line2D.Double(0, 490, 1920, 440));
+		tempArray.add(new Line2D.Double(0, 590, 1920, 640));
 		spawnStudent();
 	}
 

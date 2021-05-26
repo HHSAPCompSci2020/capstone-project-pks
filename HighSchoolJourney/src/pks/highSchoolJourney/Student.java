@@ -31,7 +31,7 @@ public class Student extends MovingImage {
 		xVelocity = 0;
 		yVelocity = 0;
 		friction = 0.85;
-		winRect = new Rectangle(1800, 600, 30, 30);
+		winRect = new Rectangle(0, 0, 30, 30);
 	}
 	
 	public int getYear() {
@@ -86,7 +86,10 @@ public class Student extends MovingImage {
 				}
 			}
 		}
-		
+		if (winRect.intersects(checkX) || winRect.intersects(checkY)){
+			System.out.println("win");
+			year++;
+		}
 		if (Math.abs(xVelocity) < .1)
 			xVelocity = 0;
 		xVelocity *= friction;

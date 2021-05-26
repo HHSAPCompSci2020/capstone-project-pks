@@ -1,4 +1,5 @@
 package pks.highSchoolJourney;
+import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 import processing.core.PApplet;
 import processing.core.PImage;

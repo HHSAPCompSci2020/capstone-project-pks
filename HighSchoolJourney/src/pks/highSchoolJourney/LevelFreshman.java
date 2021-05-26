@@ -25,8 +25,8 @@ public class LevelFreshman extends PApplet {
 	public LevelFreshman(PApplet surface) {
 		freshmanLevel = new ArrayList<Shape>(); 
 		
-		freshmanLevel.add(new Line2D.Double(0, 440, 1920, 540));
-		freshmanLevel.add(new Line2D.Double(0, 640, 1920, 640));
+		freshmanLevel.add(new Line2D.Double(0, 490, 1920, 540));
+		freshmanLevel.add(new Line2D.Double(0, 590, 1920, 640));
 		
 	}
 	
