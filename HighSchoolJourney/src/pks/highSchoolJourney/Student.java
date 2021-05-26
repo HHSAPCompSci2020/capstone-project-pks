@@ -34,8 +34,12 @@ public class Student extends MovingImage {
 		winRect = new Rectangle(1800, 600, 30, 30);
 	}
 	
-	public int returnYear() {
+	public int getYear() {
 		return year;
+	}
+	
+	public void addYear() {
+		year++;
 	}
 	
 	/**
