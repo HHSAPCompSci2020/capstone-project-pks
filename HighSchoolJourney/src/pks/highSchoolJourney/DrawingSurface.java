@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import processing.core.PApplet;
 
 /**
- * drawingSurface of game
+ * drawingSurface of game. Contains screenWidth, screenHeight, a student player and
+ * an arraylist of integers for keys.
  * @author Pranav, Sachin, Kevin 
  *
  */
@@ -79,11 +80,20 @@ public class DrawingSurface extends PApplet {
 		keys.add(keyCode);
 	}
 
+	/**
+	 * Detects when keys are released
+	 */
 	public void keyReleased() {
 		while(keys.contains(keyCode))
 			keys.remove(new Integer(keyCode));
 	}
 
+	/**
+	 * Checks whether input key is curently pressed or not
+	 * @param code of type Integer to provide a proper search on the desired key
+	 * @return booleans testing whether or not the integer code representing 
+	 * a key was pressed or not.
+	 */
 	public boolean isPressed(Integer code) {
 		return keys.contains(code);
 	}
