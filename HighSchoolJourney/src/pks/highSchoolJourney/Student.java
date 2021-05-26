@@ -35,13 +35,24 @@ public class Student extends MovingImage {
 		winRect = new Rectangle(1800, 500, 30, 30);
 	}
 	
+	/**
+	 * Sets intersections point at given x integer
+	 * @param x integer of intersection
+	 */
 	public void setIntersect(int x) {
 		intersect = x;
 	}
+	/**
+	 * Returns the year field value
+	 * @return integer value of year
+	 */
 	public int getYear() {
 		return year;
 	}
-	
+	/**
+	 * returns the integer of intersection
+	 * @return integer value intersection
+	 */
 	public int getIntersect() {
 		return intersect;
 	}
@@ -55,7 +66,10 @@ public class Student extends MovingImage {
 		if (xVelocity <= 20 && xVelocity >= -20)
 			xVelocity += change;
 	}
-	
+	/**
+	 * Checks if conditions to win are met
+	 * @return true if conditions are met to win
+	 */
 	public boolean checkWin() {
 		double x1 = getX();
 		double y1= getY();

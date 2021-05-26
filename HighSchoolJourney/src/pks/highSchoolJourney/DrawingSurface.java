@@ -171,7 +171,10 @@ public class DrawingSurface extends PApplet {
 			popStyle();
 		}
 	}
-		
+	
+	/**
+	 * Spawns student at coordinate (10,515)
+	 */
 	public void spawnStudent() {
 		player = new Student(10, 515);
 	}

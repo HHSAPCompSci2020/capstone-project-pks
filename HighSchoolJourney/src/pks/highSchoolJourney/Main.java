@@ -8,6 +8,11 @@ import javax.swing.JPanel;
 import processing.awt.PSurfaceAWT;
 import processing.core.PApplet;
 
+/**
+ * Executes main method to run program
+ * @author Kevin, Pranav, Sachin
+ *
+ */
 public class Main {
 
 	private JPanel cardPanel;
@@ -15,6 +20,10 @@ public class Main {
 	//private MainMenu panel1;    
 	private DrawingSurface panel2;
 	
+	/**
+	 * Main method that runs program
+	 * @param args methods take in arguments 
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DrawingSurface drawing = new DrawingSurface();
