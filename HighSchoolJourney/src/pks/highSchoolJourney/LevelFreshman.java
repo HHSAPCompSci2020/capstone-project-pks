@@ -22,11 +22,11 @@ public class LevelFreshman extends PApplet {
 	 * Constructs the level by giving life to the array list of shapes and adding 
 	 * shapes to the list.
 	 */
-	public LevelFreshman(PApplet surface) {
+	public LevelFreshman() {
 		freshmanLevel = new ArrayList<Shape>(); 
 		
-		freshmanLevel.add(new Line2D.Double(0, 490, 1920, 540));
-		freshmanLevel.add(new Line2D.Double(0, 590, 1920, 640));
+		freshmanLevel.add(new Line2D.Double(0, 490, 1920, 490));
+		freshmanLevel.add(new Line2D.Double(0, 590, 1920, 590));
 		
 	}
 	

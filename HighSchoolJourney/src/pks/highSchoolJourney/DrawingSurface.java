@@ -18,6 +18,7 @@ public class DrawingSurface extends PApplet {
 	// FIELDS
 	public static final int screenWidth = 1920;
 	public static final int screenHeight = 1080;
+	private LevelFreshman freshmanLevel = new LevelFreshman();
 	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
@@ -32,8 +33,8 @@ public class DrawingSurface extends PApplet {
 		super();
 		keys = new ArrayList<Integer>();
 		tempArray = new ArrayList<Shape>();
-		tempArray.add(new Line2D.Double(0, 490, 1920, 440));
-		tempArray.add(new Line2D.Double(0, 590, 1920, 640));
+		tempArray.add(new Line2D.Double(0, 490, 1920, 490));
+		tempArray.add(new Line2D.Double(0, 590, 1920, 590));
 		spawnStudent();
 	}
 
@@ -54,6 +55,17 @@ public class DrawingSurface extends PApplet {
 		textSize(10);
 		popStyle();
 		player.draw(this);
+		if (player.getYear() == 1)
+		{
+			for(Shape s : freshmanLevel.getLevel())
+			{
+				if(s instanceof Line2D)
+				{
+					Line2D l = (Line2D)s;
+					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+				}
+			}
+		}
 		player.act(tempArray);
 		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
