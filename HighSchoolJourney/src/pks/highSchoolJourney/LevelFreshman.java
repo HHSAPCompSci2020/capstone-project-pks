@@ -15,4 +15,8 @@ public class LevelFreshman extends PApplet {
 		
 		freshmanLevel.add(new Rectangle(0,0,0,0));
 	}
+	
+	public ArrayList<Shape> getLevel() {
+		return freshmanLevel;
+	}
 }

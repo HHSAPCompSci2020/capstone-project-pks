@@ -15,4 +15,8 @@ public class LevelSenior extends PApplet{
 		seniorLevel = new ArrayList<Shape>();
 		
 	}
+	
+	public ArrayList<Shape> getLevel() {
+		return seniorLevel;
+	}
 }
