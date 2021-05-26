@@ -11,7 +11,7 @@ import processing.core.PApplet;
 /**
  * Level 1, freshman year of High School, easy difficulty. Contains an array list of shapes that represent
  * obstacles in the level.
- * @author Pman
+ * @author Pranav
  *
  */
 public class LevelFreshman extends PApplet {
