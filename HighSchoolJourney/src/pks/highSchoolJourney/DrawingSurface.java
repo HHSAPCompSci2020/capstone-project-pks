@@ -18,7 +18,6 @@ public class DrawingSurface extends PApplet {
 	// FIELDS
 	public static final int screenWidth = 1920;
 	public static final int screenHeight = 1080;
-	private LevelFreshman fresh;
 	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
@@ -48,7 +47,7 @@ public class DrawingSurface extends PApplet {
 	/**
 	 * draws the game screen and keeps updating the screen as needed
 	 */
-	public void draw() {
+	public void draw(LevelFreshman freshmanLevel, LevelSophomore sophomoreLevel, LevelJunior juniorLevel, LevelSenior seniorLevel) {
 		background(255);
 		pushStyle();
 		fill(0);
