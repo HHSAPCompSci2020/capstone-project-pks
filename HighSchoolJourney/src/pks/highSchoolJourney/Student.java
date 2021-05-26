@@ -20,7 +20,7 @@ public class Student extends MovingImage {
 	}
 	
 	public void walk(int change) {
-		if (xVelocity <= 10 && xVelocity >= -10)
+		if (xVelocity <= 20 && xVelocity >= -20)
 			xVelocity += change;
 	}
 	
