@@ -12,7 +12,7 @@ public class Main {
 
 	private JPanel cardPanel;
 	
-	private MainMenu panel1;    
+	//private MainMenu panel1;    
 	private DrawingSurface panel2;
 	
 	public static void main(String[] args) {

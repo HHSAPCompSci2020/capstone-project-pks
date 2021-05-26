@@ -55,19 +55,20 @@ public class DrawingSurface extends PApplet {
 	 */
 	public void draw() {
 		background(255);
-		pushMatrix();
 		pushStyle();
 		fill(0);
 		textSize(10);
 		popStyle();
 		player.draw(this);
-	/*	if (isPressed(KeyEvent.VK_A))
+		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
 		if (isPressed(KeyEvent.VK_D))
 			player.walk(1);
 		if (isPressed(KeyEvent.VK_W))
-			player.jump();
-			*/	
+			player.jump(-1);
+		if (isPressed(KeyEvent.VK_S))
+			player.jump(1);
+		player.act();
 	}
 	public void spawnStudent() {
 		player = new Student(600,200);
