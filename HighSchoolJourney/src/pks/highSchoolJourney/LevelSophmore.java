@@ -17,4 +17,8 @@ public class LevelSophmore extends PApplet {
 		
 	}
 	
+	public ArrayList<Shape> getLevel() {
+		return sophmoreLevel;
+	}
+	
 }
