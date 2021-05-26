@@ -27,18 +27,28 @@ public class LevelSenior extends PApplet{
 		
 		seniorLevel.add(new Line2D.Double(0, 490, 420, 490));
 		seniorLevel.add(new Line2D.Double(0, 590, 520, 590));
+		seniorLevel.add(new Line2D.Double(300, 590, 330, 560));
+		seniorLevel.add(new Line2D.Double(330, 560, 360, 590));
 		seniorLevel.add(new Line2D.Double(420, 490, 420, 290));
 		seniorLevel.add(new Line2D.Double(520, 590, 520, 390));
 		seniorLevel.add(new Line2D.Double(420, 290, 720, 290));
 		seniorLevel.add(new Line2D.Double(520, 390, 620, 390));
+		seniorLevel.add(new Line2D.Double(540, 290, 570, 320));
+		seniorLevel.add(new Line2D.Double(570, 320, 600, 290));
 		seniorLevel.add(new Line2D.Double(720, 290, 720, 650));
 		seniorLevel.add(new Line2D.Double(620, 390, 620, 750));
 		seniorLevel.add(new Line2D.Double(720, 650, 920, 650));
 		seniorLevel.add(new Line2D.Double(620, 750, 1020, 750));
+		seniorLevel.add(new Line2D.Double(790, 750, 820, 720));
+		seniorLevel.add(new Line2D.Double(820, 720, 850, 750));
 		seniorLevel.add(new Line2D.Double(920, 650, 920, 490));
 		seniorLevel.add(new Line2D.Double(1020, 750, 1020, 590));
 		seniorLevel.add(new Line2D.Double(920, 490, 1920, 490));
 		seniorLevel.add(new Line2D.Double(1020, 590, 1920, 590));
+		seniorLevel.add(new Line2D.Double(1220, 490, 1250, 520));
+		seniorLevel.add(new Line2D.Double(1250, 520, 1280, 490));
+		seniorLevel.add(new Line2D.Double(1520, 590, 1550, 560));
+		seniorLevel.add(new Line2D.Double(1550, 560, 1580, 590));
 		
 	}
 	
