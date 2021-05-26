@@ -47,7 +47,7 @@ public class DrawingSurface extends PApplet {
 	/**
 	 * draws the game screen and keeps updating the screen as needed
 	 */
-	public void draw(LevelFreshman freshmanLevel, LevelSophomore sophomoreLevel, LevelJunior juniorLevel, LevelSenior seniorLevel) {
+	public void draw() {
 		background(255);
 		pushStyle();
 		fill(0);

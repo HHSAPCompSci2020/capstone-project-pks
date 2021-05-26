@@ -18,6 +18,7 @@ public class Student extends MovingImage {
 	private double friction;
 	private int lives = 1;
 	private int year = 1;
+	private Rectangle winRect;
 	
 	/**
 	 * Constructs a student by assigning values to fields and 
@@ -30,6 +31,7 @@ public class Student extends MovingImage {
 		xVelocity = 0;
 		yVelocity = 0;
 		friction = 0.85;
+		winRect = new Rectangle(1800, 600, 30, 30);
 	}
 	
 	public int returnYear() {
@@ -80,6 +82,7 @@ public class Student extends MovingImage {
 				}
 			}
 		}
+		
 		if (Math.abs(xVelocity) < .1)
 			xVelocity = 0;
 		xVelocity *= friction;
