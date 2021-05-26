@@ -1,13 +1,20 @@
 package pks.highSchoolJourney;
+import java.awt.CardLayout;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import processing.awt.PSurfaceAWT;
 import processing.core.PApplet;
 
 public class Main {
 
+	private JPanel cardPanel;
+	
+	private MainMenu panel1;    
+	private DrawingSurface panel2;
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DrawingSurface drawing = new DrawingSurface();
@@ -23,4 +30,8 @@ public class Main {
 		canvas.requestFocus();
 	}
 
+	public void changePanel() {
+		((CardLayout)cardPanel.getLayout()).next(cardPanel);
+		//panel2.requestFocus();
+	}
 }

@@ -5,6 +5,8 @@ import java.util.*;
 
 import processing.core.PApplet;
 
+//Author: Kevin
+
 public class Student {
 
 	private double xVelocity, yVelocity;

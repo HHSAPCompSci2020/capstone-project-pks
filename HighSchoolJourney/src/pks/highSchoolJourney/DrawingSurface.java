@@ -16,8 +16,10 @@ public class DrawingSurface extends PApplet {
 	// FIELDS
 	public static final int screenWidth = 1920;
 	public static final int screenHeight = 1080;
+	
 	private Student player;
 	private ArrayList<Integer> keys;
+	
 	private ArrayList<Shape> freshmanLevel;
 	private ArrayList<Shape> sophmoreLevel;
 	private ArrayList<Shape> juniorLevel;
