@@ -19,11 +19,7 @@ public class DrawingSurface extends PApplet {
 	
 	private Student player;
 	private ArrayList<Integer> keys;
-	
-	private ArrayList<Shape> freshmanLevel;
-	private ArrayList<Shape> sophmoreLevel;
-	private ArrayList<Shape> juniorLevel;
-	private ArrayList<Shape> seniorLevel;
+
 
 	// CONSTRUCTOR - Initialize any added fields here.
 	/**
@@ -33,12 +29,6 @@ public class DrawingSurface extends PApplet {
 	public DrawingSurface() {
 		super();
 		keys = new ArrayList<Integer>();
-
-		
-		freshmanLevel = new ArrayList<Shape>();
-		sophmoreLevel = new ArrayList<Shape>();
-		juniorLevel = new ArrayList<Shape>();
-		seniorLevel = new ArrayList<Shape>();
 		
 		spawnStudent();
 	}
