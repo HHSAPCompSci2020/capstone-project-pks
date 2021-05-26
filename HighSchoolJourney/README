@@ -1,10 +1,10 @@
 
-The High Schooler‚Äôs Journey
+The High Schooler°Øs Journey
 Authors: Kevin Yu, Pranav Ponugoti, Sachin Thapa
-Revision: 05/23/21
+Revision: 05/26/21
 
 Introduction: 
-[In a few paragraphs totaling about ¬Ω page, introduce the high-level concept of your program. What this looks like depends a lot on what type of thing you are making. An introduction for an application will look different than one for a game. In general, your introduction should address questions like these:
+[In a few paragraphs totaling about 1/2 page, introduce the high-level concept of your program. What this looks like depends a lot on what type of thing you are making. An introduction for an application will look different than one for a game. In general, your introduction should address questions like these:
 What does your program do?
 What problem does it solve? Why did you write it?
 What is the story?
@@ -14,9 +14,9 @@ What are the primary features of your program?]
 
 Our program is a game that depicts the journey of a typical high schooler, growing through their Freshman, Sophomore, Junior, and Senior years. Each of these years will be levels of the game, so it will have 4 levels.
 
-The story starts with a recently promoted middle schooler being placed into a fresh, unexplored high school environment, where they will have to relearn how to survive and try to make it to the end, where they will ‚Äúgraduate‚Äù.
+The story starts with a recently promoted middle schooler being placed into a fresh, unexplored high school environment, where they will have to relearn how to survive and try to make it to the end, where they will °∞graduate°±.
 
-The game‚Äôs style will be similar to that of Super Mario Bros in that it will have a side view and be a platformer, with different obstacles along the way. The ultimate goal is to reach the end of the level on the very right. The basic rules are you can move up, left, down, and right with the WASD or arrow keys.
+The game°Øs style will be similar to that of Super Mario Bros in that it will have a TOP view, with different obstacles along the way. The ultimate goal is to reach the end of the level on the very right. The basic rules are you can move up, left, down, and right with the WASD or arrow keys.
 
 The target demographic for our game is students who are transitioning from middle school to high school.This game could even be a fun way to show new high school students what lies ahead, and can be played in events like the freshman orientation.
 
@@ -29,7 +29,7 @@ Where will you need to click?
 Will you have menus that need to be navigated? What will they look like? 
 Do actions need to be taken in a certain order?]
 
-The AD keys or ‚Üê, ‚Üí keys will be used to move the character Left and Right. The W or ‚Üë key will be used to make the character jump, and the S or ‚Üì key will be used to make the character crouch. These actions will be necessary to progress through the game and bypass certain obstacles.
+The AD keys or °˚, °˙ keys will be used to move the character Left and Right. The W or °¸ key will be used to make the character jump, and the S or °˝ key will be used to make the character crouch. These actions will be necessary to progress through the game and bypass certain obstacles.
 
 There will be a main menu, in which the user will be able to select the level they wish to play (so the user can replay levels). However, previous levels must be completed in order to have the later levels unlocked. The main menu can be navigated through the W and S keys, or their corresponding arrow keys, which will highlight different options on the menu. The enter button will be used to select an option once highlighted.
 
@@ -38,19 +38,19 @@ Once in a level, the player will be presented with a 2D obstacle course. The pla
 Features List (THE ONLY SECTION THAT CANNOT CHANGE LATER):
 Must-have Features:
 [These are features that we agree you will definitely have by the project due date. A good final project would have all of these completed. At least 5 are required. Each feature should be fully described (at least a few full sentences for each)]
-A Graphical User Interface that will have the obstacles and bosses (Final exams) in a 2D side view perspective. Obstacles include physical objects and small minions/enemies that are obstructing the user‚Äôs path to the end. However, there are other special types of obstacles such as Pop Quizzes, which will pop a question on the screen for the user to answer, much like trivia questions. Bosses will be like a traditional game boss that has to be fought.
+A Graphical User Interface that will have the obstacles and bosses (Final exams) in a 2D top view perspective. Obstacles include physical objects and small minions/enemies that are obstructing the user°Øs path to the end. However, there are other special types of obstacles such as Pop Quizzes, which will pop a question on the screen for the user to answer, much like trivia questions. Bosses will be like a traditional game boss that has to be fought.
 In game character that the player can control with WASD to move forward, up, backwards,   and crouch
 Menu and navigation screen that lets the user know the controls of the game and how to play it. Also help the user select the level they want to play.
 Have four levels, each unique and progressively difficult. The previous levels must be completed in order to play the next level. Once unlocked, the user can play whichever unlocked level in the order of their choice. Levels center around the character, meaning they scroll to the right as the user moves right and scroll back left if the user moves left.
 Checkpoints in each level where the character in the game spawns back after dying. The character must have been on the checkpoint for it to count as the most recent checkpoint. No checkpoints means character starts at the beginning of the level. Most recent checkpoint is the one the character spawns back at.
 
 Want-to-have Features:
-[These are features that you would like to have by the project due date, but you‚Äôre unsure whether you‚Äôll hit all of them. A good final project would have perhaps half of these completed. At least 5 are required. Again, fully describe each.]
-Extra credit opportunities - A few tokens of ‚Äúextra credit‚Äù will be distributed along the level‚Äôs path, that the user must go out of their way to collect.
+[These are features that you would like to have by the project due date, but you°Øre unsure whether you°Øll hit all of them. A good final project would have perhaps half of these completed. At least 5 are required. Again, fully describe each.]
+Extra credit opportunities - A few tokens of °∞extra credit°± will be distributed along the level°Øs path, that the user must go out of their way to collect.
 Scaling window size that will proportionally adjust to the size the user sets the window at.
 Life counter that indicates the amount of times the character in the game died and had to restart at a checkpoint.
 Sound effects for certain character actions like jumping up, hitting an obstacle, reaching checkpoint, etc. Soundtrack for menu screen along with different levels of the game.
-Pop Quiz obstacles - Momentarily interrupts the game by displaying a question and answer choices on screen for the user to pick between. If the user gets the answer wrong, they ‚Äúdie‚Äù or reset to the last checkpoint.
+Pop Quiz obstacles - Momentarily interrupts the game by displaying a question and answer choices on screen for the user to pick between. If the user gets the answer wrong, they °∞die°± or reset to the last checkpoint.
 
 Stretch Features:
 [These are features that we agree a fully complete version of this program would have, but that you probably will not have time to implement. A good final project does not necessarily need to have any of these completed at all. At least 3 are required. Again, fully describe each.]
@@ -60,20 +60,25 @@ Stretch Features:
 
 
 Class List:
-[This section lists the Java classes that make up the program and very briefly describes what each represents. It‚Äôs totally fine to put this section in list format and not to use full sentences.]
-Level interface for level classes to follow 
-MenuScreen class for pop up window when initially run 
-Character class for the character in game
-Obstacle class for objects to block character‚Äôs progression
-DrawingSurface to draw the levels 
-Main class to run the game
+[This section lists the Java classes that make up the program and very briefly describes what each represents. It°Øs totally fine to put this section in list format and not to use full sentences.]
+MovingImage class to aid the student class and provide it with proper functionality
+Student class for the character in game which also had 
+Four level classes for objects to block character°Øs progression and create different difficulties of levels
+DrawingSurface to draw the level, spawn the character, reset the character to original level, read user input, and determine which level the player is playing.
+Main class to run the game and open the window
+MainMenu class to create a menu for the user to select difficulty level
 
 Credits:
 [Gives credit for project components. This includes both internal credit (your group members) and external credit (other people, websites, libraries). To do this:
 List the group members and describe how each member contributed to the completion of the final program. This could be classes written, art assets created, leadership/organizational skills exercises, or other tasks. Initially, this is how you plan on splitting the work.
-Give credit to all outside resources used. This includes downloaded images or sounds, external java libraries, parent/tutor/student coding help, etc.]
+Give credit to all outside resources used. This includes downloaded images or sounds, external java libraries, parent/tutor/student coding help, etc.
 
-Kevin: Work on readme, brainstorming, uml
-Pranav: Work on readme, brainstorming, javadocs
-Sachin: Work on readme, brainstorming, jar
+Kevin: Work on readme, brainstorming, uml, DrawingSurface class, Main class, Student class, MovingImage class
+Pranav: Work on readme, brainstorming, javadocs, FreshmenLevel class, SeniorLevel class DrawingSurface class,.
+Sachin: Work on readme, brainstorming, jar SophomoreLevel class, JuniorLevel class
+
+Credit: 
+Mr. Shelby AnimationDemoProcessing project
+
+
 

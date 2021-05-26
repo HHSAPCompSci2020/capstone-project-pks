@@ -78,6 +78,7 @@ public class Student extends MovingImage {
 			for (Shape ob : obstacles) {
 				if (ob.intersects(checkX)) {
 					intersect = intersect + 1;
+					lives = lives + 1;
 				}
 			}
 		}
@@ -86,6 +87,7 @@ public class Student extends MovingImage {
 				if (ob.intersects(checkY)) {
 					intersect = intersect + 1;
 					System.out.println("lives");
+					lives = lives + 1;	
 				}
 			}
 		}
