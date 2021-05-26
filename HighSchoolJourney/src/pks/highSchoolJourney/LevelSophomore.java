@@ -7,7 +7,7 @@ import java.awt.geom.Line2D.Double;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import processing.core.PApplet;
-//push
+
 /**
  * Level 2, sophomore year of High School, intermediate difficulty. Contains an array list of shapes that represent
  * obstacles in the level. 
