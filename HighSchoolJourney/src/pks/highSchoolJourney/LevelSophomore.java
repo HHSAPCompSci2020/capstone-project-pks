@@ -40,9 +40,6 @@ public class LevelSophomore extends PApplet {
 		sophomoreLevel.add(new Line2D.Double(1020, 750, 1020, 590));
 		sophomoreLevel.add(new Line2D.Double(920, 490, 1920, 490));
 		sophomoreLevel.add(new Line2D.Double(1020, 590, 1920, 590));
-	
-		
-		
 
 	}
 	

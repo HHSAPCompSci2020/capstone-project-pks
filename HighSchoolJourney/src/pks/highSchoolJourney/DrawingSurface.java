@@ -20,6 +20,8 @@ public class DrawingSurface extends PApplet {
 	public static final int screenHeight = 1080;
 	private LevelFreshman freshmanLevel = new LevelFreshman();
 	private LevelSophomore sophomoreLevel = new LevelSophomore();
+	private LevelJunior juniorLevel = new LevelJunior();
+	private LevelSenior seniorLevel = new LevelSenior();
 	private ArrayList<Shape> tempArray;
 	private Student player;
 	private ArrayList<Integer> keys;
@@ -56,6 +58,24 @@ public class DrawingSurface extends PApplet {
 		textSize(10);
 		popStyle();
 		player.draw(this);
+		
+		if (player.getYear() == 1)
+		{
+			player.act(sophomoreLevel.getLevel());
+			for(Shape s : sophomoreLevel.getLevel())
+			{
+				if(s instanceof Line2D)
+				{
+					Line2D l = (Line2D)s;
+					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+				}
+				if (player.getIntersect() >= 1) {
+					spawnStudent();
+					player.setIntersect(0);
+				}
+			}
+		}
+		
 		if (player.getYear() == 2)
 		{
 			player.act(sophomoreLevel.getLevel());
@@ -72,6 +92,41 @@ public class DrawingSurface extends PApplet {
 				}
 			}
 		}
+		
+		if (player.getYear() == 3)
+		{
+			player.act(juniorLevel.getLevel());
+			for(Shape s : juniorLevel.getLevel())
+			{
+				if(s instanceof Line2D)
+				{
+					Line2D l = (Line2D)s;
+					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+				}
+				if (player.getIntersect() >= 1) {
+					spawnStudent();
+					player.setIntersect(0);
+				}
+			}
+		}
+		
+//		if (player.getYear() == 4)
+//		{
+//			player.act(seniorLevel.getLevel());
+//			for(Shape s : seniorLevel.getLevel())
+//			{
+//				if(s instanceof Line2D)
+//				{
+//					Line2D l = (Line2D)s;
+//					line((float)l.getX1(), (float)l.getY1(), (float)l.getX2(), (float)l.getY2());
+//				}
+//				if (player.getIntersect() >= 1) {
+//					spawnStudent();
+//					player.setIntersect(0);
+//				}
+//			}
+//		}
+		
 		if (isPressed(KeyEvent.VK_A))
 			player.walk(-1);
 		if (isPressed(KeyEvent.VK_D))
